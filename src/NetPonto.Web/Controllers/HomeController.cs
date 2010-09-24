@@ -11,7 +11,7 @@ namespace NetPonto.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            ViewData["Message"] = "Welcome to NetPonto User Group!";
 
             return View();
         }
