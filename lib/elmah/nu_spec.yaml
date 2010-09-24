@@ -1,0 +1,97 @@
+--- !ruby/object:Gem::Specification 
+name: elmah
+version: !ruby/object:Gem::Version 
+  hash: 40110795
+  prerelease: false
+  segments: 
+  - 1
+  - 1
+  - 11517
+  - 0
+  - 20100822
+  version: 1.1.11517.0.20100822
+platform: ruby
+authors: 
+- Atif Aziz
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-08-22 07:00:00 +01:00
+default_executable: 
+dependencies: []
+
+description: ELMAH (Error Logging Modules and Handlers) is an application-wide error logging facility that is completely pluggable. It can be dynamically added to a running ASP.NET web application, or even all ASP.NET web applications on a machine, without any need for re-compilation or re-deployment.
+email: atif.aziz@skybow.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/x64/net-2.0/Elmah.dll
+- lib/x64/net-2.0/Elmah.pdb
+- lib/x64/net-2.0/Elmah.xml
+- lib/x64/net-2.0/System.Data.SQLite.DLL
+- lib/x64/net-2.0/VistaDB.NET20.dll
+- lib/x64/net-3.5/Elmah.dll
+- lib/x64/net-3.5/Elmah.pdb
+- lib/x64/net-3.5/Elmah.xml
+- lib/x64/net-3.5/System.Data.SQLite.DLL
+- lib/x64/net-3.5/VistaDB.NET20.dll
+- lib/x86/net-1.0/Elmah.dll
+- lib/x86/net-1.0/Elmah.pdb
+- lib/x86/net-1.0/Elmah.xml
+- lib/x86/net-1.1/Elmah.dll
+- lib/x86/net-1.1/Elmah.pdb
+- lib/x86/net-1.1/Elmah.xml
+- lib/x86/net-2.0/Elmah.dll
+- lib/x86/net-2.0/Elmah.pdb
+- lib/x86/net-2.0/Elmah.xml
+- lib/x86/net-2.0/System.Data.SQLite.DLL
+- lib/x86/net-2.0/VistaDB.NET20.dll
+- lib/x86/net-3.5/Elmah.dll
+- lib/x86/net-3.5/Elmah.pdb
+- lib/x86/net-3.5/Elmah.xml
+- lib/x86/net-3.5/System.Data.SQLite.DLL
+- lib/x86/net-3.5/VistaDB.NET20.dll
+- docs/COPYING.txt
+- docs/README.html
+- docs/README.txt
+has_rdoc: true
+homepage: http://code.google.com/p/elmah/
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: elmah
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: ELMAH - Error Logging Modules and Handlers for ASP.NET
+test_files: []
+
