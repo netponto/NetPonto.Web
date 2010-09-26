@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetPonto.Web", "NetPonto.Web\NetPonto.Web.csproj", "{AD442848-5E5F-46D9-954C-D6725CE84A40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetPonto.Infrastructure", "NetPonto.Infrastructure\NetPonto.Infrastructure.csproj", "{13EB545E-55D1-4504-884B-C6BFE24F5CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetPonto.Services", "NetPonto.Services\NetPonto.Services.csproj", "{145EC910-A1F6-4BCC-803F-B643868354D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{AD442848-5E5F-46D9-954C-D6725CE84A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD442848-5E5F-46D9-954C-D6725CE84A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD442848-5E5F-46D9-954C-D6725CE84A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EB545E-55D1-4504-884B-C6BFE24F5CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EB545E-55D1-4504-884B-C6BFE24F5CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EB545E-55D1-4504-884B-C6BFE24F5CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EB545E-55D1-4504-884B-C6BFE24F5CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145EC910-A1F6-4BCC-803F-B643868354D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145EC910-A1F6-4BCC-803F-B643868354D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145EC910-A1F6-4BCC-803F-B643868354D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145EC910-A1F6-4BCC-803F-B643868354D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
