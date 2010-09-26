@@ -24,7 +24,7 @@ namespace NetPonto.Infrastructure
         public Configuration CreateConfiguration()
         {
             FluentConfiguration configuration = Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2005
+                .Database(MsSqlConfiguration.MsSql2008
                               .ConnectionString(c => c.Is(_connectionString))
                               .AdoNetBatchSize(50))
                 .Mappings(m => m.AutoMappings.Add(AutoMap.Assemblies(new AutoMappingConfiguration(),

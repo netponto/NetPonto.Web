@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -10,10 +9,8 @@ using Autofac;
 using Autofac.Integration.Web;
 using Autofac.Integration.Web.Mvc;
 using NetPonto.Infrastructure;
-using NetPonto.Services.Events;
-using NHibernate;
+using NetPonto.Web.Modules;
 using NHibernate.Tool.hbm2ddl;
-using Module = Autofac.Module;
 
 namespace NetPonto.Web
 {
@@ -64,7 +61,8 @@ namespace NetPonto.Web
             var builder = new ContainerBuilder();
             var currentAssembly = typeof(MvcApplication).Assembly;
 
-            builder.RegisterModule(new InfrastructureModule(currentAssembly));
+            builder.RegisterModule(new InfrastructureModule(currentAssembly, ConfigurationManager.ConnectionStrings["ApplicationServices"]
+                                                                                 .ConnectionString));
 
             _containerProvider = new ContainerProvider(builder.Build());
 
@@ -73,50 +71,6 @@ namespace NetPonto.Web
         public IContainerProvider ContainerProvider
         {
             get { return _containerProvider; }
-        }
-
-        public class InfrastructureModule : Module
-        {
-            private readonly Assembly _currentAssembly;
-
-            public InfrastructureModule(Assembly currentAssembly)
-            {
-                _currentAssembly = currentAssembly;
-            }
-
-            protected override void Load(ContainerBuilder builder)
-            {
-                builder.RegisterType<ConfigureNHibernate>()
-                .WithParameters(new[]
-                                    {
-                                        new NamedParameter("connectionString",
-                                                           ConfigurationManager
-                                                               .ConnectionStrings["ApplicationServices"]
-                                                               .ConnectionString),
-                                        new NamedParameter("assembliesWithEntities",
-                                                           new[] {typeof (Event).Assembly})
-                                    })
-                .SingleInstance();
-
-                builder.RegisterAdapter<ConfigureNHibernate, NHibernate.Cfg.Configuration>(configure => configure.CreateConfiguration())
-                    .SingleInstance();
-
-                builder.RegisterAdapter<NHibernate.Cfg.Configuration, ISessionFactory>(configuration => configuration.BuildSessionFactory())
-                    .SingleInstance();
-
-                builder.RegisterType<SchemaUpdate>();
-
-                // TODO: create transaction when opening, abort on error, commit on success
-                builder.RegisterAdapter<ISessionFactory, ISession>(factory => factory.OpenSession())
-                    .HttpRequestScoped();
-
-                builder.RegisterGeneric(typeof(NHibernateRepository<>))
-                    .As(typeof(IRepository<>))
-                    .HttpRequestScoped();
-
-                builder.RegisterControllers(_currentAssembly);
-                builder.RegisterAssemblyTypes(_currentAssembly);
-            }
         }
     }
 }
