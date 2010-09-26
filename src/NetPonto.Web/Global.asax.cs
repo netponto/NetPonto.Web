@@ -39,7 +39,7 @@ namespace NetPonto.Web
 
             ConfigureAutofac();
 
-            UpdateDatabase();
+            UpdateDatabaseSchema();
 
             AreaRegistration.RegisterAllAreas();
 
@@ -51,7 +51,7 @@ namespace NetPonto.Web
             NhProf.Initialize();
         }
 
-        private void UpdateDatabase()
+        private void UpdateDatabaseSchema()
         {
             _containerProvider.ApplicationContainer.Resolve<SchemaUpdate>().Execute(true, true);
         }
