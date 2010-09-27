@@ -1,0 +1,5 @@
+﻿<viewdata model="NetPonto.Web.Models.Event.Details"/>
+
+<p>
+    !{Html.DisplayForModel()}
+</p>

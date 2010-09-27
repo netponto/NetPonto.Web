@@ -6,11 +6,11 @@ namespace NetPonto.Services.Events
 {
     public class Event : IEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTimeOffset Date { get; set; }
-        public string Description { get; set; }
-        public Uri LinkToFotos { get; set; }
-        public IList<Presentation> Presentations { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
+        public virtual DateTimeOffset Date { get; set; }
+        public virtual string Description { get; set; }
+        public virtual Uri LinkToFotos { get; set; }
+        public virtual IList<Presentation> Presentations { get; set; }
     }
 }

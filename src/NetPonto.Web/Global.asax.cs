@@ -11,6 +11,8 @@ using Autofac.Integration.Web.Mvc;
 using NetPonto.Infrastructure;
 using NetPonto.Web.Modules;
 using NHibernate.Tool.hbm2ddl;
+using Spark;
+using Spark.Web.Mvc;
 
 namespace NetPonto.Web
 {
@@ -20,6 +22,11 @@ namespace NetPonto.Web
     public class MvcApplication : HttpApplication, IContainerProviderAccessor
     {
         static IContainerProvider _containerProvider;
+        public IContainerProvider ContainerProvider
+        {
+            get { return _containerProvider; }
+        }
+
 
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -39,6 +46,8 @@ namespace NetPonto.Web
 
             ConfigureAutofac();
 
+            ConfigureSpark();
+
             UpdateDatabaseSchema();
 
             AreaRegistration.RegisterAllAreas();
@@ -51,11 +60,6 @@ namespace NetPonto.Web
             NhProf.Initialize();
         }
 
-        private void UpdateDatabaseSchema()
-        {
-            _containerProvider.ApplicationContainer.Resolve<SchemaUpdate>().Execute(true, true);
-        }
-
         private void ConfigureAutofac()
         {
             var builder = new ContainerBuilder();
@@ -65,12 +69,26 @@ namespace NetPonto.Web
                                                                                  .ConnectionString));
 
             _containerProvider = new ContainerProvider(builder.Build());
-
             ControllerBuilder.Current.SetControllerFactory(new AutofacControllerFactory(ContainerProvider));
         }
-        public IContainerProvider ContainerProvider
+
+        private void ConfigureSpark()
         {
-            get { return _containerProvider; }
+            var settings = new SparkSettings()
+                .SetDebug(true)
+                .AddAssembly(typeof (MvcApplication).Assembly)
+                .AddNamespace("System")
+                .AddNamespace("System.Collections.Generic")
+                .AddNamespace("System.Linq")
+                .AddNamespace("System.Web.Mvc")
+                .AddNamespace("System.Web.Mvc.Html");
+
+            ViewEngines.Engines.Add(new SparkViewFactory(settings));
+        }
+
+        private void UpdateDatabaseSchema()
+        {
+            _containerProvider.ApplicationContainer.Resolve<SchemaUpdate>().Execute(true, true);
         }
     }
 }

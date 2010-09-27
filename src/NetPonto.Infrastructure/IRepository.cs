@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace NetPonto.Infrastructure
 {
@@ -6,5 +7,6 @@ namespace NetPonto.Infrastructure
     {
         T Get(int id);
         void SaveOrUpdate(T t);
+        IEnumerable<T> LoadAll();
     }
 }

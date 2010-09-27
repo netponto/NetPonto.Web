@@ -1,0 +1,8 @@
+﻿<viewdata model="NetPonto.Web.Models.Event.Create"/>
+
+<p>
+# Html.BeginForm();
+    !{Html.EditorForModel()}
+    <input type="submit" value="Create" />
+# Html.EndForm();
+</p>

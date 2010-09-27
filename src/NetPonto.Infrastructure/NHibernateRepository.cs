@@ -1,4 +1,7 @@
-﻿using NHibernate;
+﻿using System;
+using System.Collections.Generic;
+using NHibernate;
+using NHibernate.Linq;
 
 namespace NetPonto.Infrastructure
 {
@@ -19,6 +22,11 @@ namespace NetPonto.Infrastructure
         public void SaveOrUpdate(T t)
         {
             _session.SaveOrUpdate(t);
+        }
+
+        public IEnumerable<T> LoadAll()
+        {
+            return _session.Linq<T>();
         }
     }
 }

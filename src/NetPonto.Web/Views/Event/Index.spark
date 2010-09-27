@@ -1,0 +1,10 @@
+﻿<viewdata model="NetPonto.Web.Models.Event.Index"/>
+
+
+
+<div each="var evt in ViewData.Model.Events">
+    <h3>${evt.Name} - ${evt.Date}</h3>
+    <p>${evt.Description}</p>
+</div>
+
+<p>${ViewData.Model.Count} events found</p>
