@@ -28,7 +28,7 @@ namespace NetPonto.Infrastructure
                               .ConnectionString(c => c.Is(_connectionString))
                               .AdoNetBatchSize(50))
                 .Mappings(m => m.AutoMappings.Add(AutoMap.Assemblies(new AutoMappingConfiguration(),
-                                                                     _assembliesWithEntities)).ExportTo(@"d:\temp"))
+                                                                     _assembliesWithEntities)))
                 .ExposeConfiguration(cfg => cfg.SetProperty("generate_statistics", "true"));
             return configuration.BuildConfiguration();   
         }
