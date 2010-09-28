@@ -1,18 +1,17 @@
-Website for Comunidade NetPonto 
-===============================
-
-Required software
-=================
-
-Powershell
+Website for Comunidade NetPonto (http://netponto.org)
+=====================================================
 
 To start hacking 
 ================
 
 In powershell: '.\psake setup'
 
+
 Optional
 ========
+
+To build:
+Powershell
 
 To manage dependencies:
  - Ruby ( download installer from http://www.ruby-lang.org/en/downloads/ )
