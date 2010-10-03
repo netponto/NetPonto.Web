@@ -83,6 +83,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -94,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\local.css" />
+    <Content Include="Content\css\ddsmoothmenu.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Global.asax" />
     <None Include="Views\Event\Details.spark" />
     <None Include="Views\Event\Create.spark" />
@@ -105,7 +109,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -132,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\image\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetPonto.Infrastructure\NetPonto.Infrastructure.csproj">

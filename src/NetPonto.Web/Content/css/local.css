@@ -1,0 +1,16 @@
+.wrapper
+{
+    margin: 0 auto;
+    width: 960px;
+} 
+
+#logo
+{
+   top:60px ! important;
+}
+
+#footerInner
+{
+    margin: 0 auto;
+    width: 960px;   
+}

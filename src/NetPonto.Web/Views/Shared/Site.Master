@@ -4,36 +4,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <%= Html.IncludeCss("style.css", "ddsmoothmenu.css", "local.css") %>
 </head>
 
 <body>
-    <div class="page">
+    <div class="wrapper">
 
         <div id="header">
             <div id="title">
-                <h1>My MVC Application</h1>
+                <div id="logo">
+                    <%= Html.Image("netponto-header.png", "Netponto Header") %>
+                </div>
             </div>
               
-            <div id="logindisplay">
+            <div id="topMenuRight">
                 <% Html.RenderPartial("LogOnUserControl"); %>
             </div> 
             
-            <div id="menucontainer">
+            <div id="topMenu" >
             
-                <ul id="menu">              
-                    <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%= Html.ActionLink("About", "About", "Home")%></li>
+                <ul id="menu" class="menu">              
+                    <li class="menu-item menu-item-taxonomy"><%= Html.ActionLink("Home", "Index", "Home")%></li>
+                    <li class="menu-item menu-item-taxonomy"><%= Html.ActionLink("About", "About", "Home")%></li>
                 </ul>
             
             </div>
         </div>
 
-        <div id="main">
+        <div id="content" class="clearfix">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
 
-            <div id="footer">
-            </div>
+            
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footerInner">
+            Content copyright netponto, design from <a href="http://wordpress.site5.net/alltuts/">site5</a>.
         </div>
     </div>
 </body>

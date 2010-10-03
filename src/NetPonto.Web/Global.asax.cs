@@ -81,7 +81,8 @@ namespace NetPonto.Web
                 .AddNamespace("System.Collections.Generic")
                 .AddNamespace("System.Linq")
                 .AddNamespace("System.Web.Mvc")
-                .AddNamespace("System.Web.Mvc.Html");
+                .AddNamespace("System.Web.Mvc.Html")
+                .AddNamespace("NetPonto.Web.Extensions");
 
             ViewEngines.Engines.Add(new SparkViewFactory(settings));
         }
