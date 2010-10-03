@@ -31,6 +31,11 @@
 	</div>
 	<div id="footer">
 		<div id="footerInner">
+			insert footer here
+		</div>
+	</div>
+	<div id="copyright">
+		<div id="copyrightInner">
 			Content copyright netponto, design from <a href="http://wordpress.site5.net/alltuts/">site5</a>.
 		</div>
 	</div>

@@ -1,10 +1,62 @@
 ﻿<viewdata model="NetPonto.Web.Models.Event.Index"/>
 
 
+<div id="colLeft">
+    <div each="var evt in ViewData.Model.Events" class="postBox">
+        <div class="postBoxTop"></div>
+        <div class="postBoxMid">
+            <div class="postBoxMidInner first clearfix">
+                <div class="date">
+                    ${evt.Date}
+                </div>
+                <div class="category">Category</div>
 
-<div each="var evt in ViewData.Model.Events">
-    <h3>${evt.Name} - ${evt.Date}</h3>
-    <p>${evt.Description}</p>
+                <h1>${Html.ActionLink(evt.Name, "Details", new {id=evt.Id})}</h1>
+                <div class="postThumb">Thumbnail</div>
+                <div class="textPreview">
+                    <p>${evt.Description}</p>
+                </div>
+                <div class="postMeta">Metadata (who, link to post, comments?)</div>
+            </div>
+        </div>
+        <div class="postBoxBottom"></div>
+    </div>
+    <div class="emm-paginate">
+        <span class="emm-title">${ViewData.Model.Count} events found</span>
+        <span class="emm-page emm-current">oo</span>
+        <span class="emm-next">oo+1</span>
+    </div>
 </div>
+<div id="colRight">
+    <form id="searchform" action="" method="get">
+        <div class="rightBox">
+            <div class="rightBoxTop"></div>
+            <div class="rightBoxMidSearch">
 
-<p>${ViewData.Model.Count} events found</p>
+                <input type="text" id="s" name="s" value="type your search here" onfocus="this.value=''" onblur="this.value='type your search here'"/>
+                <input type="submit" value="" class="submit" id="searchsubmit"/>
+            </div>
+            <div class="rightBoxBottom"></div>
+        </div>
+    </form>
+
+    <div class="rightBox clearFix">
+        <div class="rightBoxTop"></div>
+        <div class="rightBoxMid">
+            <h2>Right box header</h2>
+            <ul>
+                <li>
+                    Link 1
+                </li>
+                <li>
+                    Link 2
+                </li>
+                <li>
+                    Link 3
+                </li>
+            </ul>
+        </div>
+        <div class="rightBoxBottom"></div>
+
+    </div>
+</div>

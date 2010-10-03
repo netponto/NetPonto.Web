@@ -9,6 +9,19 @@
    top:60px ! important;
 }
 
+#colLeft
+{
+    float:left;
+    margin-right:10px;
+    width:670px;
+}
+
+#colRight
+{
+    float:left;
+    width:280px;
+}
+
 #footerInner
 {
     margin: 0 auto;
