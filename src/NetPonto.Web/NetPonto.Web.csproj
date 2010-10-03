@@ -98,6 +98,20 @@
     <Content Include="Content\css\local.css" />
     <Content Include="Content\css\ddsmoothmenu.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\image\bk_body.png" />
+    <Content Include="Content\image\bk_box_bottom.png" />
+    <Content Include="Content\image\bk_box_bottom_right.png" />
+    <Content Include="Content\image\bk_box_mid.png" />
+    <Content Include="Content\image\bk_box_mid_inner.jpg" />
+    <Content Include="Content\image\bk_box_mid_right.png" />
+    <Content Include="Content\image\bk_box_top.png" />
+    <Content Include="Content\image\bk_box_top_right.jpg" />
+    <Content Include="Content\image\bk_box_top_right.png" />
+    <Content Include="Content\image\bk_but_search.jpg" />
+    <Content Include="Content\image\bk_date.png" />
+    <Content Include="Content\image\bk_footer.jpg" />
+    <Content Include="Content\image\list_red_bullet.png" />
+    <Content Include="Content\image\netponto-header.png" />
     <Content Include="Global.asax" />
     <None Include="Views\Event\Details.spark" />
     <None Include="Views\Event\Create.spark" />
@@ -136,7 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\image\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetPonto.Infrastructure\NetPonto.Infrastructure.csproj">

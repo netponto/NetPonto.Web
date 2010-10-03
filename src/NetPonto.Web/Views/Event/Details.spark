@@ -1,5 +1,21 @@
 ﻿<viewdata model="NetPonto.Web.Models.Event.Details"/>
 
-<p>
-    !{Html.DisplayForModel()}
-</p>
+<div id="colLeft">
+    <div class="postBox">
+        <div class="postBoxTop"></div>
+        <div class="postBoxMid">
+            <div class="postBoxMidInner first clearfix">
+                <div class="date">
+                    ${Model.Date}
+                </div>
+                <div class="category">Category</div>
+
+                <h1>${Model.Name}</h1>
+                <div class="postMetaSingle">Metadata (who, link to post, comments?)</div>
+                <p>${Model.Description}</p>
+                <div class="postTags">Tags</div>
+            </div>
+        </div>
+        <div class="postBoxBottom"></div>
+    </div>
+</div>
