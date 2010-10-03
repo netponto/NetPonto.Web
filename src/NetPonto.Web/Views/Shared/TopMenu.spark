@@ -1,0 +1,4 @@
+﻿<ul id="menu" class="menu">              
+	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Home", "Index", "Home")}</li>
+	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("About", "About", "Home")}</li>
+</ul>
