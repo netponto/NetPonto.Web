@@ -1,5 +1,5 @@
 ﻿<ul id="menu" class="menu">              
 	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Netponto", "Index", "Home")}</li>
-	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Reuniões", "Event", "Index")}</li>
+	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Reuniões", "Index", "Event")}</li>
 	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Acerca", "About", "Home")}</li>
 </ul>
