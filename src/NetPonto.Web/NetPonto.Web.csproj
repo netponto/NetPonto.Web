@@ -146,7 +146,9 @@
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
     <None Include="Views\Shared\Application.spark" />
-    <None Include="Views\Shared\TopMenu.spark" />
+    <None Include="Views\Shared\TopMenu.spark">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

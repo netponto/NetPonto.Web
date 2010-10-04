@@ -26,7 +26,7 @@ position: absolute;
 left: 0;
 display: none; /*collapse all sub menus to begin with*/
 visibility: hidden;
-background:url(/content/image/bk_submenu.png) 0 9px no-repeat;
+background:url(../image/bk_submenu.png) 0 9px no-repeat;
 width:auto;
 padding-bottom:7px;
 /*border-bottom:1px solid #222;*/

@@ -16,7 +16,7 @@ BODY STYLES
 
 body {
   color: #333;
-  background:#f0f0f0 url(/content/image/bk_body.png) repeat-x;
+  background:#f0f0f0 url(../image/bk_body.png) repeat-x;
   font-family:Arial, Helvetica, sans-serif;
   font-size:13px;
   line-height:135%;
@@ -97,7 +97,7 @@ LAYOUT STRUCTURE
 #header {
 	position:relative;
 	height:185px;
-	background:url(/content/image/bk_header.jpg) 0 51px no-repeat;
+	background:url(../image/bk_header.jpg) 0 51px no-repeat;
 }
 
 #content {
@@ -118,7 +118,7 @@ LAYOUT STRUCTURE
 }
 
 #footer {
-	background:#000 url(/content/image/bk_footer.jpg) 0 0 repeat-x;
+	background:#000 url(../image/bk_footer.jpg) 0 0 repeat-x;
 	padding-top:20px;
 	padding-bottom:25px;
 	margin-top:15px;
@@ -178,7 +178,7 @@ HEADER ELEMENTS
 
 #topMenu ul li a:hover {
 	color:#FFFFFF;
-	background:url(/content/image/bk_top_hover.png) 50% 0 no-repeat;
+	background:url(../image/bk_top_hover.png) 50% 0 no-repeat;
 }
 
 /* TopMenuRight */
@@ -201,7 +201,7 @@ HEADER ELEMENTS
 	line-height:42px;
 	font-size:11px;
 	padding:0 8px;
-	background:url(/content/image/list_red_bullet.png) 1px 50% no-repeat;
+	background:url(../image/list_red_bullet.png) 1px 50% no-repeat;
 }
 
 #topMenuRight ul li a:hover {
@@ -235,7 +235,7 @@ HEADER ELEMENTS
 	position:absolute;
 	right:0;
 	top:105px;
-	background:url(/content/image/bk_social_links.png) 0 50% no-repeat;
+	background:url(../image/bk_social_links.png) 0 50% no-repeat;
 	padding-left:155px;
 	height:42px;
 }
@@ -254,19 +254,19 @@ HEADER ELEMENTS
 }
 
 #socialLinks .linkedin {
-	background:url(/content/image/ico_linkedin.png) 0 0 no-repeat;
+	background:url(../image/ico_linkedin.png) 0 0 no-repeat;
 }
 
 #socialLinks .facebook {
-	background:url(/content/image/ico_facebook.png) 0 0 no-repeat;
+	background:url(../image/ico_facebook.png) 0 0 no-repeat;
 }
 
 #socialLinks .twitter {
-	background:url(/content/image/ico_twitter.png) 0 0 no-repeat;
+	background:url(../image/ico_twitter.png) 0 0 no-repeat;
 }
 
 #socialLinks .rss {
-	background:url(/content/image/ico_rss.png) 0 0 no-repeat;
+	background:url(../image/ico_rss.png) 0 0 no-repeat;
 }
 
 /*----------------------------
@@ -304,7 +304,7 @@ FOOTER ELEMENTS
 #footerInner .boxFooter ul li {
 	padding:5px 6px 5px 18px;
 	border-bottom:1px solid #292929;
-	background:url(/content/image/star.png) 0 8px no-repeat;
+	background:url(../image/star.png) 0 8px no-repeat;
 	color:#986123;
 	font-size:10px;
 	font-style:italic;
@@ -339,7 +339,7 @@ FOOTER ELEMENTS
 	display:block;
 	width:344px;
 	height:26px;
-	background:url(/content/image/site5bottom.png) 0 0 no-repeat;
+	background:url(../image/site5bottom.png) 0 0 no-repeat;
 	text-indent:-9999px;
 }
 
@@ -355,19 +355,19 @@ LEFTCOL ELEMENTS
 .postBoxTop {
 	height:5px;
 	width:668px;
-	background:url(/content/image/bk_box_top.png) 0 0 no-repeat;
+	background:url(../image/bk_box_top.png) 0 0 no-repeat;
 
 }
 
 .postBoxBottom {
 	height:5px;
 	width:668px;
-	background:url(/content/image/bk_box_bottom.png) 0 0 no-repeat;
+	background:url(../image/bk_box_bottom.png) 0 0 no-repeat;
 }
 
 .postBox .postBoxMid {
 	padding:0 5px;
-	background:url(/content/image/bk_box_mid.png) 0 0 repeat-y;
+	background:url(../image/bk_box_mid.png) 0 0 repeat-y;
 }
 
 .postBox .postBoxMid p{
@@ -385,11 +385,11 @@ LEFTCOL ELEMENTS
 }
 
 .postBox .first {
-	background:url(/content/image/bk_box_mid_inner.jpg) 0 0 no-repeat;
+	background:url(../image/bk_box_mid_inner.jpg) 0 0 no-repeat;
 }
 
 .postBoxMid .category {
-	background:url(/content/image/star.png) 0 50% no-repeat;
+	background:url(../image/star.png) 0 50% no-repeat;
 	padding:0 0 0 20px;
 	text-transform:uppercase;
 	font-size:11px;
@@ -400,7 +400,7 @@ LEFTCOL ELEMENTS
 }
 
 .postBox .postBoxMid .date {
-	background:url(/content/image/bk_date.png) 0 0 no-repeat;
+	background:url(../image/bk_date.png) 0 0 no-repeat;
 	width:62px;
 	height:89px;
 	left:-34px;
@@ -456,7 +456,7 @@ LEFTCOL ELEMENTS
 
 .postBox .postBoxMid .postMeta .more-link {
 	display:block;
-	background:url(/content/image/ico_readmore.png) 0 0 no-repeat;
+	background:url(../image/ico_readmore.png) 0 0 no-repeat;
 	padding:3px 0;
 	padding-left:35px;
 	font-size:14px;
@@ -548,7 +548,7 @@ LEFTCOL ELEMENTS
 
 .postBox .postBoxMid .postTags {
 	font-size:13px;	
-	background:url(/content/image/ico_tag.png) 0 50% no-repeat;
+	background:url(../image/ico_tag.png) 0 50% no-repeat;
 	padding-left:24px;
 	margin:25px 0 0;
 }
@@ -574,7 +574,7 @@ LEFTCOL ELEMENTS
 #content #colLeft .relatedPosts li img {
 	float:left;
 	padding:5px;
-	background:url(/content/image/bk_thumbs.jpg) 0 0 no-repeat;
+	background:url(../image/bk_thumbs.jpg) 0 0 no-repeat;
 	margin:0 10px 0 0;
 }
 
@@ -594,12 +594,12 @@ blockquote {
 	margin:20px 0 15px 20px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-style:italic;
-	background:url(/content/image/bk_blockquote.jpg) 90% 0 no-repeat;
+	background:url(../image/bk_blockquote.jpg) 90% 0 no-repeat;
 }
 
 #content #colLeft ul li, #content #colLeft ol li  {
 	padding:5px 0 5px 15px;
-	background:url(/content/image/bullet_list.png) 0 9px no-repeat;
+	background:url(../image/bullet_list.png) 0 9px no-repeat;
 }
 
 #content #colLeft ul {
@@ -618,7 +618,7 @@ blockquote {
 /* PAGINATION */
 
 .emm-paginate {padding:10px 0; overflow:hidden;}
-.emm-paginate a {background:url(/content/image/bk_pagenavi.jpg) 0 100% repeat-x; border:1px solid #ddd; color:#666; margin-right:5px; padding:4px 8px; text-align:center; text-decoration:none;}
+.emm-paginate a {background:url(../image/bk_pagenavi.jpg) 0 100% repeat-x; border:1px solid #ddd; color:#666; margin-right:5px; padding:4px 8px; text-align:center; text-decoration:none;}
 .emm-paginate .emm-title {color:#555; margin-right:4px;}
 .emm-paginate .emm-gap {color:#999; margin-right:4px;}
 .emm-paginate a:hover, .emm-paginate a:active, .emm-paginate .emm-current {color:#fff; background:#18AEF5; border:1px solid #0A95D8; margin-right:5px; padding:4px 8px;}
@@ -637,25 +637,25 @@ RIGHTCOL ELEMENTS
 .rightBoxTop {
 	height:5px;
 	width:280px;
-	background:url(/content/image/bk_box_top_right.png) 0 0 no-repeat;
+	background:url(../image/bk_box_top_right.png) 0 0 no-repeat;
 
 }
 
 .rightBoxBottom {
 	height:5px;
 	width:280px;
-	background:url(/content/image/bk_box_bottom_right.png) 0 0 no-repeat;
+	background:url(../image/bk_box_bottom_right.png) 0 0 no-repeat;
 }
 
 .rightBox .rightBoxMid {
 	padding:50px 20px 25px;
-	background:url(/content/image/bk_box_mid_right.png) 0 0 repeat-y;
+	background:url(../image/bk_box_mid_right.png) 0 0 repeat-y;
 	position:relative;
 }
 
 .rightBox .rightBoxMidSearch {
 	padding:6px 10px 5px;
-	background:url(/content/image/bk_box_mid_right.png) 0 0 repeat-y;
+	background:url(../image/bk_box_mid_right.png) 0 0 repeat-y;
 	overflow:hidden;
 }
 
@@ -666,7 +666,7 @@ RIGHTCOL ELEMENTS
 	color:#fff;
 	text-transform:uppercase;
 	display:block;
-	background:url(/content/image/bk_h2_right.png) 0 0 no-repeat;
+	background:url(../image/bk_h2_right.png) 0 0 no-repeat;
 	width:284px;
 	height:39px;
 	position:absolute;
@@ -687,7 +687,7 @@ RIGHTCOL ELEMENTS
 }
 
 #twitter #twitter_update_list {
-	background:url(/content/image/bk_twitter_box_top.png) 0 0 no-repeat;
+	background:url(../image/bk_twitter_box_top.png) 0 0 no-repeat;
 	padding:3px 15px 0;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-size:12px;
@@ -703,7 +703,7 @@ RIGHTCOL ELEMENTS
 
 #twitter #bottom {
 	height:36px;
-	background:url(/content/image/bk_twitter_box_bottom.png) 0 0 no-repeat;
+	background:url(../image/bk_twitter_box_bottom.png) 0 0 no-repeat;
 	padding-left:63px;
 	padding-top:45px;
 	font-weight:bold;
@@ -713,7 +713,7 @@ RIGHTCOL ELEMENTS
 
 .rightBox .rightBoxMidAds{
 	padding:6px 0;
-	background:url(/content/image/bk_box_mid_right.png) 0 0 repeat-y;
+	background:url(../image/bk_box_mid_right.png) 0 0 repeat-y;
 	position:relative;
 }
 
@@ -738,7 +738,7 @@ RIGHTCOL ELEMENTS
 
 h2.h2comments {
 	display:block;
-	background:url(/content/image/ico_comments.png) 0 50% no-repeat;
+	background:url(../image/ico_comments.png) 0 50% no-repeat;
 	padding:10px 0 15px 40px;
 	font-weight:bold;
 }
@@ -747,7 +747,7 @@ h2.h2comments a.addComment {
 	display:block;
 	width:151px;
 	height:30px;
-	background:url(/content/image/but_addcomment.png) 0 0 no-repeat;
+	background:url(../image/but_addcomment.png) 0 0 no-repeat;
 	text-transform:uppercase;
 	color:#fff;
 	text-align:center;
@@ -825,7 +825,7 @@ h2#commentsForm {
 	top:0;
 	width:46px;
 	height:21px;
-	background:url(/content/image/bk_link_reply.png) 0 0 no-repeat;
+	background:url(../image/bk_link_reply.png) 0 0 no-repeat;
 	text-align:center;
 	font-size:10px;
 	text-indent:-9999px;
@@ -879,7 +879,7 @@ FORMS
 #searchform input.submit {
 	width:70px;
 	height:39px;
-	background:url(/content/image/bk_but_search.jpg) 0 0 no-repeat;
+	background:url(../image/bk_but_search.jpg) 0 0 no-repeat;
 	border:none;
 	padding:0;
 	margin-top:-2px;
@@ -922,7 +922,7 @@ FORMS
 	height:30px;
 	margin-top:10px;
 	cursor:pointer;
-	background:url(/content/image/but_addcomment.png) 0 0 no-repeat;
+	background:url(../image/but_addcomment.png) 0 0 no-repeat;
 	color:#FFF;
 	font-weight:bold;
 	font-size:12px;
@@ -958,7 +958,7 @@ FORMS
 	height:30px;
 	margin-top:10px;
 	cursor:pointer;
-	background:url(/content/image/but_addcomment.png) 0 0 no-repeat;
+	background:url(../image/but_addcomment.png) 0 0 no-repeat;
 	color:#FFF;
 	font-weight:bold;
 	font-size:12px;
