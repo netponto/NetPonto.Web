@@ -4,6 +4,7 @@ using System.Reflection;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using NetPonto.Infrastructure.Conventions;
 using NHibernate;
 using NHibernate.Cfg;
 
@@ -28,7 +29,8 @@ namespace NetPonto.Infrastructure
                               .ConnectionString(c => c.Is(_connectionString))
                               .AdoNetBatchSize(50))
                 .Mappings(m => m.AutoMappings.Add(AutoMap.Assemblies(new AutoMappingConfiguration(),
-                                                                     _assembliesWithEntities)))
+                                                                     _assembliesWithEntities)
+                                                      .Conventions.AddFromAssemblyOf<RequiredConvention>()))
                 .ExposeConfiguration(cfg => cfg.SetProperty("generate_statistics", "true"));
             return configuration.BuildConfiguration();   
         }
@@ -39,7 +41,7 @@ namespace NetPonto.Infrastructure
             {
                 return typeof (IEntity).IsAssignableFrom(type);
             }
+
         }
     }
-
 }
