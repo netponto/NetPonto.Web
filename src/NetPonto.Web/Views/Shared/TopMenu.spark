@@ -2,4 +2,17 @@
 	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Netponto", "Index", "Home")}</li>
 	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Reuniões", "Index", "Event")}</li>
 	<li class="menu-item menu-item-taxonomy">${Html.ActionLink("Acerca", "About", "Home")}</li>
+    <li class="menu-item menu-item-taxonomy">
+        <a href="http://groups.google.com/group/netponto" title="NetPonto.Org - Lista de Discuss&atilde;o Oficial" target="_blank">Lista de Discuss&atilde;o</a>
+    </li>
+    <li class="menu-item menu-item-taxonomy">
+        <a href="http://twitter.com/netponto" title="Siga-nos no Twitter!" target="_blank">Twitter</a>
+    </li>
+    <li class="menu-item menu-item-taxonomy">
+        <a href="mailto:contacto@netponto.org?subject=Contacto" title="Entre em contacto connosco!">Contacto</a>
+    </li>
+    <li class="menu-item menu-item-taxonomy">
+        <a href="http://netponto-lisboa-setembro-2010.eventbrite.com/" title="Clique para efectuar o registo na próxima reuni&atilde;o">Próxima reuni&atilde;o: 18/09/2010</a>
+    </li>
 </ul>
+
