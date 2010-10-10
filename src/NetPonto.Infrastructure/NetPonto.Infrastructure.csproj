@@ -70,11 +70,15 @@
     <Compile Include="Conventions\RequiredConvention.cs" />
     <Compile Include="Conventions\StringLengthConvention.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="ILogErrors.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="NHibernateRepository.cs" />
     <Compile Include="NhProf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigureNHibernate.cs" />
+    <Compile Include="StartupTasks\IStartupTask.cs" />
+    <Compile Include="StartupTasks\IStartupTaskRunner.cs" />
+    <Compile Include="StartupTasks\StartupTaskRunner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

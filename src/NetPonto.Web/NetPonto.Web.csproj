@@ -87,12 +87,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\LogErrorsToAppData.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Event\Create.cs" />
     <Compile Include="Models\Event\Details.cs" />
     <Compile Include="Models\Event\Index.cs" />
     <Compile Include="Modules\InfrastructureModule.cs" />
+    <Compile Include="Modules\StartupTasksModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartupTasks\ConfigureSpark.cs" />
+    <Compile Include="StartupTasks\RegisterAreas.cs" />
+    <Compile Include="StartupTasks\TryAndWireNHProf.cs" />
+    <Compile Include="StartupTasks\UpdateDatabaseSchema.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\local.css" />

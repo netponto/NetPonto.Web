@@ -9,6 +9,8 @@ using Autofac;
 using Autofac.Integration.Web;
 using Autofac.Integration.Web.Mvc;
 using NetPonto.Infrastructure;
+using NetPonto.Infrastructure.StartupTasks;
+using NetPonto.Web.Helpers;
 using NetPonto.Web.Modules;
 using NHibernate.Tool.hbm2ddl;
 using Spark;
@@ -42,54 +44,34 @@ namespace NetPonto.Web
 
         protected void Application_Start()
         {
-            TryAndSetupNhProf();
-
             ConfigureAutofac();
 
-            ConfigureSpark();
-
-            UpdateDatabaseSchema();
-
-            AreaRegistration.RegisterAllAreas();
+            RunStartupTasks();
 
             RegisterRoutes(RouteTable.Routes);
-        }
-
-        private void TryAndSetupNhProf()
-        {
-            NhProf.Initialize();
         }
 
         private void ConfigureAutofac()
         {
             var builder = new ContainerBuilder();
             var currentAssembly = typeof(MvcApplication).Assembly;
+            var infrastructureAssembly = typeof (IRepository<>).Assembly;
 
-            builder.RegisterModule(new InfrastructureModule(currentAssembly, ConfigurationManager.ConnectionStrings["ApplicationServices"]
-                                                                                 .ConnectionString));
+            var connectionString = ConfigurationManager
+                .ConnectionStrings["ApplicationServices"]
+                .ConnectionString;
+            builder.RegisterModule(new InfrastructureModule(currentAssembly, infrastructureAssembly, connectionString));
+            builder.RegisterModule(new StartupTasksModule());
+            builder.RegisterInstance(this).As<HttpApplication>();
+            builder.RegisterType<LogErrorsToAppData>().As<ILogErrors>();
 
             _containerProvider = new ContainerProvider(builder.Build());
             ControllerBuilder.Current.SetControllerFactory(new AutofacControllerFactory(ContainerProvider));
         }
 
-        private void ConfigureSpark()
+        private void RunStartupTasks()
         {
-            var settings = new SparkSettings()
-                .SetDebug(true)
-                .AddAssembly(typeof (MvcApplication).Assembly)
-                .AddNamespace("System")
-                .AddNamespace("System.Collections.Generic")
-                .AddNamespace("System.Linq")
-                .AddNamespace("System.Web.Mvc")
-                .AddNamespace("System.Web.Mvc.Html")
-                .AddNamespace("NetPonto.Web.Extensions");
-
-            ViewEngines.Engines.Add(new SparkViewFactory(settings));
-        }
-
-        private void UpdateDatabaseSchema()
-        {
-            _containerProvider.ApplicationContainer.Resolve<SchemaUpdate>().Execute(true, true);
+            _containerProvider.ApplicationContainer.Resolve<IStartupTaskRunner>().ExecuteAllTasks();
         }
     }
 }
