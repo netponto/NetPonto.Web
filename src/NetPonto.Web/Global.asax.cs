@@ -60,8 +60,11 @@ namespace NetPonto.Web
             var connectionString = ConfigurationManager
                 .ConnectionStrings["ApplicationServices"]
                 .ConnectionString;
-            builder.RegisterModule(new InfrastructureModule(currentAssembly, infrastructureAssembly, connectionString));
+            
+            builder.RegisterModule(new InfrastructureModule(infrastructureAssembly, connectionString));
+            builder.RegisterModule(new WebModule(currentAssembly));
             builder.RegisterModule(new StartupTasksModule());
+
             builder.RegisterInstance(this).As<HttpApplication>();
             builder.RegisterType<LogErrorsToAppData>().As<ILogErrors>();
 

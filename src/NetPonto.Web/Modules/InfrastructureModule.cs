@@ -13,21 +13,17 @@ namespace NetPonto.Web.Modules
 {
     public class InfrastructureModule : Module
     {
-        private readonly Assembly _assemblyWithControllers;
         private readonly Assembly _assemblyWithInfrastructure;
         private readonly string _connectionString;
 
-        public InfrastructureModule(Assembly assemblyWithControllers, Assembly assemblyWithInfrastructure,  string connectionString)
+        public InfrastructureModule(Assembly assemblyWithInfrastructure,  string connectionString)
         {
-            _assemblyWithControllers = assemblyWithControllers;
             _assemblyWithInfrastructure = assemblyWithInfrastructure;
             _connectionString = connectionString;
         }
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterControllers(_assemblyWithControllers);
-
             builder.RegisterAssemblyTypes(_assemblyWithInfrastructure).AsImplementedInterfaces();
             builder.RegisterAssemblyTypes(_assemblyWithInfrastructure).AsSelf();
 

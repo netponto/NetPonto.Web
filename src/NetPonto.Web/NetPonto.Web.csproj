@@ -94,6 +94,7 @@
     <Compile Include="Models\Event\Index.cs" />
     <Compile Include="Modules\InfrastructureModule.cs" />
     <Compile Include="Modules\StartupTasksModule.cs" />
+    <Compile Include="Modules\WebModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartupTasks\ConfigureSpark.cs" />
     <Compile Include="StartupTasks\RegisterAreas.cs" />
