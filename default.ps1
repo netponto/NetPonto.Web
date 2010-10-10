@@ -13,3 +13,7 @@ Task FetchDependencies {
     nu install autofac --version 2.2.4.900
     nu install elmah --version 1.1.11517.0.20100822
 }
+
+Task SetupMembershipTables {
+    aspnet_regsql.exe -E -S localhost -A mr -d netponto
+}

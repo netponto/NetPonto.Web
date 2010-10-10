@@ -4,16 +4,15 @@
     <%
         if (Request.IsAuthenticated) {
     %>
-            Welcome <b><%= Html.Encode(Page.User.Identity.Name) %></b>!
             <li class="menu-item menu-item-type-post_type">
-                <%= Html.ActionLink("Log Off", "LogOff", "Account") %>
+                <%= Html.ActionLink("Log off "+Page.User.Identity.Name, "LogOff", "Account") %>
             </li>
     <%
         }
         else {
     %> 
             <li class="menu-item menu-item-type-post_type">
-                <%= Html.ActionLink("Log On", "LogOn", "Account") %>
+                <%= Html.ActionLink("Log on", "LogOn", "Account") %>
             </li>
     <%
         }

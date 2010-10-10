@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NetPonto.Infrastructure;
+using NetPonto.Services;
 using NetPonto.Services.Events;
 
 namespace NetPonto.Web.Controllers
@@ -37,7 +38,7 @@ namespace NetPonto.Web.Controllers
 
         //
         // GET: /Event/Create
-
+        [Authorize(Roles = SiteRoles.Administrator)]
         public ActionResult Create()
         {
             return View();
@@ -45,7 +46,7 @@ namespace NetPonto.Web.Controllers
 
         //
         // POST: /Event/Create
-
+        [Authorize(Roles = SiteRoles.Administrator)]
         [HttpPost]
         public ActionResult Create(Models.Event.Create newEvent)
         {
@@ -67,7 +68,7 @@ namespace NetPonto.Web.Controllers
         
         //
         // GET: /Event/Edit/5
- 
+        [Authorize(Roles = SiteRoles.Administrator)]
         public ActionResult Edit(int id)
         {
             throw new NotImplementedException();
@@ -76,7 +77,7 @@ namespace NetPonto.Web.Controllers
 
         //
         // POST: /Event/Edit/5
-
+        [Authorize(Roles = SiteRoles.Administrator)]
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -95,7 +96,7 @@ namespace NetPonto.Web.Controllers
 
         //
         // GET: /Event/Delete/5
- 
+        [Authorize(Roles = SiteRoles.Administrator)] 
         public ActionResult Delete(int id)
         {
             throw new NotImplementedException();
@@ -105,7 +106,7 @@ namespace NetPonto.Web.Controllers
 
         //
         // POST: /Event/Delete/5
-
+        [Authorize(Roles = SiteRoles.Administrator)]
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

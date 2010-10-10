@@ -22,6 +22,10 @@ namespace NetPonto.Infrastructure.StartupTasks
                 {
                     startupTask.Execute();
                 }
+                catch (CriticalStartupException e)
+                {
+                    throw;
+                }
                 catch (Exception e)
                 {
                     _logErrors.Log(string.Format("Error executing task {0}", startupTask), e);

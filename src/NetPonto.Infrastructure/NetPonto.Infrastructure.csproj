@@ -76,6 +76,7 @@
     <Compile Include="NhProf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigureNHibernate.cs" />
+    <Compile Include="StartupTasks\CriticalStartupException.cs" />
     <Compile Include="StartupTasks\IStartupTask.cs" />
     <Compile Include="StartupTasks\IStartupTaskRunner.cs" />
     <Compile Include="StartupTasks\StartupTaskRunner.cs" />
