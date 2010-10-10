@@ -40,23 +40,5 @@
         </div>
     </form>
 
-    <div class="rightBox clearFix">
-        <div class="rightBoxTop"></div>
-        <div class="rightBoxMid">
-            <h2>Right box header</h2>
-            <ul>
-                <li>
-                    Link 1
-                </li>
-                <li>
-                    Link 2
-                </li>
-                <li>
-                    Link 3
-                </li>
-            </ul>
-        </div>
-        <div class="rightBoxBottom"></div>
-
-    </div>
+#Html.RenderAdminPartial("AdminMenu");
 </div>

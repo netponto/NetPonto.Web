@@ -120,6 +120,7 @@
     <Content Include="Content\image\list_red_bullet.png" />
     <Content Include="Content\image\netponto-header.png" />
     <Content Include="Global.asax" />
+    <None Include="Views\Event\AdminMenu.spark" />
     <None Include="Views\Event\Details.spark" />
     <None Include="Views\Event\Create.spark" />
     <None Include="Views\Event\Index.spark" />

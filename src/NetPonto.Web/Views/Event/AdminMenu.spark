@@ -1,0 +1,15 @@
+﻿<div id="colRight">
+    <div class="rightBox clearFix">
+        <div class="rightBoxTop"></div>
+        <div class="rightBoxMid">
+            <h2>Administra&ccedil;&atilde;o</h2>
+            <ul>
+                <li>
+                    ${Html.ActionLink("Novo evento", "Create", "Event")}
+                </li>
+            </ul>
+        </div>
+        <div class="rightBoxBottom"></div>
+
+    </div>
+</div>

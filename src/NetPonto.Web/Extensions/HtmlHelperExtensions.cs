@@ -1,6 +1,7 @@
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using NetPonto.Services;
 
 namespace NetPonto.Web.Extensions
 {
@@ -48,6 +49,14 @@ namespace NetPonto.Web.Extensions
                 links.AppendLine    (link.ToString(TagRenderMode.Normal));
             }
             return MvcHtmlString.Create(links.ToString());
+        }
+
+        public static void RenderAdminPartial(this HtmlHelper self, string partialView)
+        {
+            if (self.ViewContext.HttpContext.User.IsInRole(SiteRoles.Administrator))
+            {
+                self.RenderPartial(partialView);
+            }
         }
 
         private static UrlHelper CreateUrlHelper(this HtmlHelper self)
