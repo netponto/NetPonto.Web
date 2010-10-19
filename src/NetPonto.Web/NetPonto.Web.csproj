@@ -84,6 +84,7 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -92,6 +93,7 @@
     <Compile Include="Models\Event\Create.cs" />
     <Compile Include="Models\Event\Details.cs" />
     <Compile Include="Models\Event\Index.cs" />
+    <Compile Include="Models\Home\Index.cs" />
     <Compile Include="Modules\InfrastructureModule.cs" />
     <Compile Include="Modules\StartupTasksModule.cs" />
     <Compile Include="Modules\WebModule.cs" />

@@ -29,7 +29,7 @@ namespace NetPonto.Web.Extensions
             var urlHelper = self.CreateUrlHelper();
 
             var link = new TagBuilder("img");
-            link.Attributes["src"] = urlHelper.Content("~/content/image/" + imageFile);
+            link.Attributes["src"] = urlHelper.Image(imageFile);
             link.Attributes["alt"] = altText ?? "";
 
             return MvcHtmlString.Create(link.ToString(TagRenderMode.SelfClosing));
