@@ -24,7 +24,13 @@ namespace NetPonto.Web.Extensions
             return MvcHtmlString.Create(links.ToString());
         }
 
-        public static MvcHtmlString Image(this HtmlHelper self, string imageFile, string altText = null)
+        public static MvcHtmlString Image(this HtmlHelper self, string imageFile)
+        {
+            string altText = null;
+            return Image(self, imageFile, altText);
+        }
+
+        public static MvcHtmlString Image(this HtmlHelper self, string imageFile, string altText)
         {
             var urlHelper = self.CreateUrlHelper();
 
