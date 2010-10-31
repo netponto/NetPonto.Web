@@ -61,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -80,6 +81,8 @@
     <Compile Include="StartupTasks\IStartupTask.cs" />
     <Compile Include="StartupTasks\IStartupTaskRunner.cs" />
     <Compile Include="StartupTasks\StartupTaskRunner.cs" />
+    <Compile Include="Validation\UseAnnotationsFromAttribute.cs" />
+    <Compile Include="Validation\UseFromAnotherModelDataAnnotationsModelMetadataProvider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
