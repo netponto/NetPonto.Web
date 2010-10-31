@@ -55,7 +55,8 @@ namespace NetPonto.Web.Controllers
                 var @event = new Event();
                 @event.Name = newEvent.Name;
                 @event.Description = newEvent.Description;
-                @event.Date = newEvent.Date;
+                if(newEvent.Date.HasValue)
+                    @event.Date = newEvent.Date.Value;
                 _repository.SaveOrUpdate(@event);
 
                 return RedirectToAction("Details", new {id = @event.Id});

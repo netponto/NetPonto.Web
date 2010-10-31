@@ -129,6 +129,7 @@
     <None Include="Views\Event\Details.spark" />
     <None Include="Views\Event\Create.spark" />
     <None Include="Views\Event\Index.spark" />
+    <Content Include="Views\Shared\EditorTemplates\DateTimeOffset.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
