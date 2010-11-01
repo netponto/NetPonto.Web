@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using NetPonto.Infrastructure;
@@ -21,7 +19,6 @@ namespace NetPonto.Web.Controllers
 
         //
         // GET: /Event/
-
         public ActionResult Index()
         {
             var events = _repository.LoadAll();
@@ -30,11 +27,10 @@ namespace NetPonto.Web.Controllers
 
         //
         // GET: /Event/Details/5
-
         public ActionResult Details(int id)
         {
             var @event = _repository.Get(id);
-            return View(new Models.Event.Details{Name= @event.Name, Description = @event.Description, Date = @event.Date});
+            return View(Mapper.Map<Event, Models.Event.Details>(@event));
         }
 
         //
@@ -66,9 +62,7 @@ namespace NetPonto.Web.Controllers
         {
             var @event = _repository.Get(id);
 
-            var eventModel = Mapper.Map<Event, Models.Event.Edit>(@event);
-
-            return View(eventModel);
+            return View(Mapper.Map<Event, Models.Event.Edit>(@event));
         }
 
         //

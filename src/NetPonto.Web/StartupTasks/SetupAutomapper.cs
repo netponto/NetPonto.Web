@@ -17,6 +17,8 @@ namespace NetPonto.Web.StartupTasks
             Mapper.CreateMap<Models.Event.Edit, Event>().ForMember(e => e.Schedule, c => c.Ignore());
 
             Mapper.CreateMap<Models.Event.Create, Event>().ForMember(e => e.Schedule, c => c.Ignore());
+
+            Mapper.CreateMap<Event, Models.Event.Details>();
             
             Mapper.AssertConfigurationIsValid();
         }
