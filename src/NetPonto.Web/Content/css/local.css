@@ -27,3 +27,8 @@
     margin: 0 auto;
     width: 960px;   
 }
+
+.editor-field .time input
+{
+    width:20px;
+}

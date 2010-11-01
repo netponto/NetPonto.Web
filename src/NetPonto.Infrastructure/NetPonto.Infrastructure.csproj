@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conventions\RequiredConvention.cs" />
+    <Compile Include="Conventions\SaveOrUpdateCascade.cs" />
     <Compile Include="Conventions\StringLengthConvention.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="ILogErrors.cs" />

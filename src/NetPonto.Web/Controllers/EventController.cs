@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 using NetPonto.Infrastructure;
 using NetPonto.Services;
 using NetPonto.Services.Events;
@@ -50,21 +51,12 @@ namespace NetPonto.Web.Controllers
         [HttpPost]
         public ActionResult Create(Models.Event.Create newEvent)
         {
-            try
-            {
-                var @event = new Event();
-                @event.Name = newEvent.Name;
-                @event.Description = newEvent.Description;
-                if(newEvent.Date.HasValue)
-                    @event.Date = newEvent.Date.Value;
-                _repository.SaveOrUpdate(@event);
+            var evt = Mapper.Map<Models.Event.Create, Event>(newEvent);
+            evt.SetStandardSchedule();
 
-                return RedirectToAction("Details", new {id = @event.Id});
-            }
-            catch
-            {
-                return View();
-            }
+            _repository.SaveOrUpdate(evt);
+
+            return RedirectToAction("Edit", new {id = evt.Id});
         }
         
         //
@@ -72,27 +64,48 @@ namespace NetPonto.Web.Controllers
         [Authorize(Roles = SiteRoles.Administrator)]
         public ActionResult Edit(int id)
         {
-            throw new NotImplementedException();
-            return View();
+            var @event = _repository.Get(id);
+
+            var eventModel = Mapper.Map<Event, Models.Event.Edit>(@event);
+
+            return View(eventModel);
         }
 
         //
         // POST: /Event/Edit/5
         [Authorize(Roles = SiteRoles.Administrator)]
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Models.Event.Edit incomingEvent)
         {
-            throw new NotImplementedException();
-            try
+            var evt = _repository.Get(incomingEvent.Id);
+
+            Mapper.Map(incomingEvent, evt);
+            var schedules = evt.Schedule.ToDictionary(s => s.Id);
+
+            foreach (var incomingPart in incomingEvent.Schedule)
             {
-                // TODO: Add update logic here
- 
-                return RedirectToAction("Index");
+                Mapper.Map(incomingPart, schedules[incomingPart.Id.Value]);
             }
-            catch
-            {
-                return View();
-            }
+
+            _repository.SaveOrUpdate(evt);
+
+            return RedirectToAction("Edit", new {id = incomingEvent.Id});
+        }
+        
+        [Authorize(Roles = SiteRoles.Administrator)]
+        [HttpPost]
+        public ActionResult AddSchedule(int id, Models.Event.Edit.SchedulePart part)
+        {
+            var evt = _repository.Get(id);
+
+            var newPart = Mapper.Map<Models.Event.Edit.SchedulePart, SchedulePart>(part);
+            newPart.Id = 0;
+
+            evt.Schedule.Add(newPart);
+
+            _repository.SaveOrUpdate(evt);
+            
+            return RedirectToAction("Edit", new {id = evt.Id});
         }
 
         //

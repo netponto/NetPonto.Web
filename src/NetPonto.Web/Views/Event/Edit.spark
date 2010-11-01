@@ -1,0 +1,24 @@
+﻿<viewdata model="NetPonto.Web.Models.Event.Edit"/>
+
+<p>
+# Html.BeginForm();
+    !{Html.EditorForModel()}
+
+    <fieldset>
+        <legend>Schedule</legend>
+        <div each="var part in Model.Schedule">
+            !{Html.EditorFor(m => m.Schedule[partIndex])}
+        </div>
+    </fieldset>
+    <input type="submit" value="Save" />
+    # Html.EndForm();
+
+
+    <fieldset>
+        <legend>Add new schedule part to event</legend>
+    # Html.BeginForm("AddSchedule","Event",  new {id = Model.Id});
+    # Html.RenderPartial("AddSchedulePart", new Models.Event.Edit.SchedulePart());
+    <input type="submit" value="Add" />
+        # Html.EndForm();
+    </fieldset>
+</p>
