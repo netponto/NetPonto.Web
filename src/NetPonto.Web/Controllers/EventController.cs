@@ -73,6 +73,7 @@ namespace NetPonto.Web.Controllers
 
         //
         // POST: /Event/Edit/5
+        [ValidateInput(false)]
         [Authorize(Roles = SiteRoles.Administrator)]
         [HttpPost]
         public ActionResult Edit(Models.Event.Edit incomingEvent)

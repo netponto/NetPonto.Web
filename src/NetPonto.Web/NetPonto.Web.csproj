@@ -141,6 +141,7 @@
     <None Include="Views\Event\Index.spark" />
     <Content Include="Views\Shared\EditorTemplates\DateTimeOffset.ascx" />
     <Content Include="Views\Shared\EditorTemplates\SchedulePart.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\WymEditor.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

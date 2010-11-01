@@ -4,6 +4,7 @@
 	<title><use content="title" /></title>
 	${Html.IncludeCss("style.css","ddsmoothmenu.css", "local.css", "jquery-ui-1.8.5.custom.css")}
 	${Html.IncludeJs("jquery-1.4.1.js", "jquery-ui-1.8.5.custom.min.js")}
+	<use content="head"/>
 </head>
 
 <body>

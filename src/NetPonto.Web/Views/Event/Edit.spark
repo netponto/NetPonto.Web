@@ -1,5 +1,5 @@
 ﻿<viewdata model="NetPonto.Web.Models.Event.Edit"/>
-
+<content name="head">!{Html.IncludeJs("jquery.wymeditor.pack.js")}</content>
 <p>
 # Html.BeginForm();
     !{Html.EditorForModel()}
