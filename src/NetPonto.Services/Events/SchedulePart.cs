@@ -17,6 +17,12 @@ namespace NetPonto.Services.Events
             Name = name;
         }
 
+        public SchedulePart(int hours, int minutes, string name, Presentation presentation)
+            : this(hours, minutes, name)
+        {
+            Presentation = presentation;
+        }
+
         public virtual int Id { get; set; }
 
         [Required]

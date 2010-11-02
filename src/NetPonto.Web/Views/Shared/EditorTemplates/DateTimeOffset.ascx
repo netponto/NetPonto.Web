@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<DateTimeOffset?>" %>
 
 <%string name = ViewData.TemplateInfo.HtmlFieldPrefix;%>  
-<%string id = name.Replace(".", "_");%>  
+<%string id = name.AsHtmlIdInTemplate();%>  
     
 <%= Html.TextBoxFor(model => model) %>  
 <%= Html.ValidationMessageFor(model => model) %>  

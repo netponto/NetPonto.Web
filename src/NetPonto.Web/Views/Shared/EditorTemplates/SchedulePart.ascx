@@ -14,8 +14,15 @@
     <%= Html.TextBoxFor(model => model.Name, new {size = 50}) %>
     <%= Html.ValidationMessageFor(model => model.Name) %>
 </span>
-   
-            
+
+<% if (Model.Presentation != null) {  %>
+<div>
+    <fieldset>
+        <legend>Presentation</legend>
+        <%= Html.EditorFor(model => model.Presentation) %>
+    </fieldset>
+</div>
+<% } %>
         
 
 

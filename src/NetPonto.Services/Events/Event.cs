@@ -25,9 +25,11 @@ namespace NetPonto.Services.Events
         {
             Schedule = Schedule ?? new List<SchedulePart>();
             Schedule.Add(new SchedulePart(9, 30, "Recepção dos participantes"));
-            Schedule.Add(new SchedulePart(10, 0, "---Apresentação 1"));
+            Schedule.Add(new SchedulePart(10, 0, "---Apresentação 1",
+                                          new Presentation() {Name = "Name", Description = "Description"}));
             Schedule.Add(new SchedulePart(11, 30, "Coffee-break"));
-            Schedule.Add(new SchedulePart(12, 00, "---Apresentação 2"));
+            Schedule.Add(new SchedulePart(12, 00, "---Apresentação 2",
+                                          new Presentation() {Name = "Name", Description = "Description"}));
             Schedule.Add(new SchedulePart(13, 30, "Painel de Discussão"));
         }
     }

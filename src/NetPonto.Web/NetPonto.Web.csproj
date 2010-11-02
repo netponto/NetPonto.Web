@@ -91,6 +91,7 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +141,7 @@
     <None Include="Views\Event\Create.spark" />
     <None Include="Views\Event\Index.spark" />
     <Content Include="Views\Shared\EditorTemplates\DateTimeOffset.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Presentation.ascx" />
     <Content Include="Views\Shared\EditorTemplates\SchedulePart.ascx" />
     <Content Include="Views\Shared\EditorTemplates\WymEditor.ascx" />
     <Content Include="Web.config">
