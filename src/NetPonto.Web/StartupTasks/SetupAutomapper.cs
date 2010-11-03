@@ -23,8 +23,6 @@ namespace NetPonto.Web.StartupTasks
                 .ForMember(e => e.Schedule, c => c.Ignore());
 
             Mapper.CreateMap<Event, Models.Event.Details>();
-            
-            Mapper.AssertConfigurationIsValid();
         }
     }
 }

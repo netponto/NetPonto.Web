@@ -22,10 +22,11 @@ namespace NetPonto.Web.Helpers
         {
             lock (_fileLock)
             {
-                using (var output= new StreamWriter(_errorsPath))
+                using (var output= File.AppendText(_errorsPath))
                 {
                     var now = DateTime.Now;
-                    output.WriteLine("{0} - {1} : {2}", now, message, exception);
+                    output.WriteLine("{0} - {1} \n{2}", now, message, exception);
+                    output.Flush();
                 }
             }
         }
