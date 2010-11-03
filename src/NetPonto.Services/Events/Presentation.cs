@@ -8,10 +8,6 @@ namespace NetPonto.Services.Events
     {
         public virtual int Id { get; set; }
 
-        [Required]
-        [StringLength(255)]
-        public virtual string Name { get; set; }
-
         [StringLength(2048)]
         public virtual string Description { get; set; }
 

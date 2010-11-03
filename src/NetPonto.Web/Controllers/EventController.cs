@@ -116,7 +116,7 @@ namespace NetPonto.Web.Controllers
 
             if (schedulePart.Presentation == null)
             {
-                schedulePart.Presentation = new Presentation(){Name=schedulePart.Name};
+                schedulePart.Presentation = new Presentation();
             }
             _repository.SaveOrUpdate(evt);
 

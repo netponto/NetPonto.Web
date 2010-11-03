@@ -14,7 +14,6 @@ namespace NetPonto.Web.Models.Event
         {
             [HiddenInput(DisplayValue = false)]
             public int Id { get; set; }
-            public string Name { get; set; }
             [UIHint("WymEditor")]
             public string Description { get; set; }
             public string Presenter { get; set; }
