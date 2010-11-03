@@ -1,6 +1,6 @@
 ﻿<viewdata model="NetPonto.Web.Models.Event.Edit"/>
 <content name="head">!{Html.IncludeJs("wymeditor/jquery.wymeditor.pack.js")}</content>
-<p>
+<div class="edit">
 # Html.BeginForm();
     !{Html.EditorForModel()}
 
@@ -10,18 +10,20 @@
             !{Html.EditorFor(m => m.Schedule[partIndex])}
         </div>
     </fieldset>
-    <input type="submit" value="Save" class="wymupdate" />
+    <div class="form_actions">
+        !{Html.ActionLink("back to Details", "Details", new {id=Model.Id})}
+        <input type="submit" value="Save" class="wymupdate" />
+    </div>
     # Html.EndForm();
-
 
     <fieldset>
         <legend>Add new schedule part to event</legend>
-    # Html.BeginForm("AddSchedule","Event",  new {id = Model.Id});
-    # Html.RenderPartial("AddSchedulePart", new Models.Event.Edit.SchedulePart());
-    <input type="submit" value="Add" />
+        # Html.BeginForm("AddSchedule","Event",  new {id = Model.Id});
+            # Html.RenderPartial("AddSchedulePart", new Models.Event.Edit.SchedulePart());
+            <input type="submit" value="Add" />
         # Html.EndForm();
     </fieldset>
-</p>
+</div>
 
 <script type="text/javascript">
     function addPresentation(schedulePartId){

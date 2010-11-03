@@ -32,3 +32,18 @@
 {
     width:20px;
 }
+
+.edit .form_actions 
+{
+    display:block; 
+    height:40px;
+    margin:5px 10px 5px 10px;
+}
+.edit .form_actions a
+{
+    float:left;
+}
+.edit .form_actions input
+{
+    float:right;
+}
