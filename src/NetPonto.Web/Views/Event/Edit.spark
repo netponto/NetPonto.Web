@@ -22,3 +22,14 @@
         # Html.EndForm();
     </fieldset>
 </p>
+
+<script type="text/javascript">
+    function addPresentation(schedulePartId){
+    $.post('!{Url.Action("AddPresentation", "Event", new {id = Model.Id})}?schedulePartId='+schedulePartId, {}, function(){ window.location.reload(); } );
+    }
+    
+    function removePresentation(schedulePartId){
+    $.post('!{Url.Action("RemovePresentation", "Event", new {id = Model.Id})}?schedulePartId='+schedulePartId, {}, function(){ window.location.reload(); } );
+    }
+
+</script>

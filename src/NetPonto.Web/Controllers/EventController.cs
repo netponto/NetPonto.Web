@@ -103,6 +103,44 @@ namespace NetPonto.Web.Controllers
             return RedirectToAction("Edit", new {id = evt.Id});
         }
 
+        [Authorize(Roles = SiteRoles.Administrator)]
+        [HttpPost]
+        public ActionResult AddPresentation(int id, int schedulePartId)
+        {
+            var evt = _repository.Get(id);
+
+            var schedulePart = evt.Schedule.SingleOrDefault(e => e.Id == schedulePartId);
+
+            if (schedulePart == null)
+                throw new InvalidOperationException(string.Format("No schedulePart found with id {0}", schedulePartId));
+
+            if (schedulePart.Presentation == null)
+            {
+                schedulePart.Presentation = new Presentation(){Name=schedulePart.Name};
+            }
+            _repository.SaveOrUpdate(evt);
+
+            return RedirectToAction("Edit", new {id = evt.Id});
+        }
+        
+        [Authorize(Roles = SiteRoles.Administrator)]
+        [HttpPost]
+        public ActionResult RemovePresentation(int id, int schedulePartId)
+        {
+            var evt = _repository.Get(id);
+
+            var schedulePart = evt.Schedule.SingleOrDefault(e => e.Id == schedulePartId);
+
+            if (schedulePart == null)
+                throw new InvalidOperationException(string.Format("No schedulePart found with id {0}", schedulePartId));
+
+            schedulePart.Presentation = null;
+            
+            _repository.SaveOrUpdate(evt);
+
+            return RedirectToAction("Edit", new {id = evt.Id});
+        }
+
         //
         // GET: /Event/Delete/5
         [Authorize(Roles = SiteRoles.Administrator)] 
