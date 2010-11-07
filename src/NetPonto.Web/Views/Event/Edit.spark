@@ -3,6 +3,7 @@
 <div class="edit">
 # Html.BeginForm();
     !{Html.EditorForModel()}
+    !{Html.AntiForgeryToken()}
 
     <fieldset>
         <legend>Schedule</legend>

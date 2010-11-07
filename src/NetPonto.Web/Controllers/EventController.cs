@@ -70,6 +70,7 @@ namespace NetPonto.Web.Controllers
         [ValidateInput(false)]
         [Authorize(Roles = SiteRoles.Administrator)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(Models.Event.Edit incomingEvent)
         {
             var evt = _repository.Get(incomingEvent.Id);
