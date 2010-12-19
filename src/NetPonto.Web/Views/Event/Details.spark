@@ -13,6 +13,17 @@
                 <h1>${Model.Name}</h1>
                 <div class="postMetaSingle">Metadata (who, link to post, comments?)</div>
                 <p>${Model.Description}</p>
+
+              <div>
+                <div each="var part in Model.Schedule">
+                  <h3>${part.Name}</h3>
+                  <div if="part.Presentation != null">
+                   ${part.Presentation.Description}
+                    <p>${part.Presentation.Presenter}</p>
+                    ${part.Presentation.SlideshareEmbedCode.RenderAsSlideshareEmbedCode()}
+                  </div>
+                </div>
+              </div>
                 <div class="postTags">Tags</div>
             </div>
         </div>

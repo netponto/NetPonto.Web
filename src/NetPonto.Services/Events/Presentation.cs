@@ -13,7 +13,10 @@ namespace NetPonto.Services.Events
 
         [StringLength(255)]
         public virtual string Presenter { get; set; }
-        public virtual Uri LinkToSlides { get; set; }
+
+        [StringLength(128)]
+        public virtual string SlideshareEmbedCode { get; set; }
+
         public virtual Uri LinkToVideo { get; set; }
     }
 }

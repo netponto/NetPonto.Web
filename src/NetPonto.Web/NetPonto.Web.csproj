@@ -95,6 +95,7 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\SlideshareStringExtensions.cs" />
     <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
