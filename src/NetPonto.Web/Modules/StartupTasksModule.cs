@@ -13,7 +13,8 @@ namespace NetPonto.Web.Modules
         {
             builder.RegisterAssemblyTypes(this.GetType().Assembly)
                 .InNamespaceOf<UpdateDatabaseSchema>()
-                .AsImplementedInterfaces();
+                .AsImplementedInterfaces()
+                .SingleInstance();
         }
     }
 }

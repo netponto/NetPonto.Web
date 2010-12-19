@@ -1,4 +1,7 @@
-﻿<div id="colRight">
+﻿<viewdata Id="int?" />
+    
+
+<div id="colRight">
     <div class="rightBox clearFix">
         <div class="rightBoxTop"></div>
         <div class="rightBoxMid">
@@ -6,6 +9,9 @@
             <ul>
                 <li>
                     ${Html.ActionLink("Novo evento", "Create", "Event")}
+                </li>
+                <li if="Id.HasValue">
+                    ${Html.ActionLink("Editar", "Edit", "Event", new {id = Id.Value}, null)}
                 </li>
             </ul>
         </div>

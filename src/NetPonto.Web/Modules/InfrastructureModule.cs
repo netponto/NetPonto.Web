@@ -5,6 +5,7 @@ using Autofac.Integration.Web;
 using Autofac.Integration.Web.Mvc;
 using NetPonto.Infrastructure;
 using NetPonto.Services.Events;
+using NetPonto.Web.HttpModules;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using Module = Autofac.Module;
@@ -46,8 +47,9 @@ namespace NetPonto.Web.Modules
             builder.RegisterType<SchemaUpdate>();
 
             // TODO: create transaction when opening, abort on error, commit on success
-            builder.RegisterAdapter<ISessionFactory, ISession>(factory => factory.OpenSession())
+            builder.RegisterAdapter<ISessionFactory, ISession>(factory => TransactionPerRequest.SetSessionAndStartTransaction(factory.OpenSession()))
                 .HttpRequestScoped();
+                
 
             builder.RegisterGeneric(typeof(NHibernateRepository<>))
                 .As(typeof(IRepository<>))

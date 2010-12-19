@@ -1,0 +1,3 @@
+﻿<viewdata model="NetPonto.Web.Models.Event.Edit.SchedulePart"/>
+
+!{Html.EditorForModel()}

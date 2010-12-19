@@ -19,3 +19,6 @@
         <div class="postBoxBottom"></div>
     </div>
 </div>
+<div id="colRight">
+    #Html.RenderAdminPartial("AdminMenu", new {Id = Model.Id});
+</div>

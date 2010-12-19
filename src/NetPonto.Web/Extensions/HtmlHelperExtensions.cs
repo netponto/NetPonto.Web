@@ -64,6 +64,14 @@ namespace NetPonto.Web.Extensions
                 self.RenderPartial(partialView);
             }
         }
+        
+        public static void RenderAdminPartial(this HtmlHelper self, string partialView, object model)
+        {
+            if (self.ViewContext.HttpContext.User.IsInRole(SiteRoles.Administrator))
+            {
+                self.RenderPartial(partialView, model);
+            }
+        }
 
         private static UrlHelper CreateUrlHelper(this HtmlHelper self)
         {

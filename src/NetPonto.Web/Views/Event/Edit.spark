@@ -1,0 +1,38 @@
+﻿<viewdata model="NetPonto.Web.Models.Event.Edit"/>
+<content name="head">!{Html.IncludeJs("wymeditor/jquery.wymeditor.pack.js")}</content>
+<div class="edit">
+# Html.BeginForm();
+    !{Html.EditorForModel()}
+    !{Html.AntiForgeryToken()}
+
+    <fieldset>
+        <legend>Schedule</legend>
+        <div each="var part in Model.Schedule">
+            !{Html.EditorFor(m => m.Schedule[partIndex])}
+        </div>
+    </fieldset>
+    <div class="form_actions">
+        !{Html.ActionLink("back to Details", "Details", new {id=Model.Id})}
+        <input type="submit" value="Save" class="wymupdate" />
+    </div>
+    # Html.EndForm();
+
+    <fieldset>
+        <legend>Add new schedule part to event</legend>
+        # Html.BeginForm("AddSchedule","Event",  new {id = Model.Id});
+            # Html.RenderPartial("AddSchedulePart", new Models.Event.Edit.SchedulePart());
+            <input type="submit" value="Add" />
+        # Html.EndForm();
+    </fieldset>
+</div>
+
+<script type="text/javascript">
+    function addPresentation(schedulePartId){
+    $.post('!{Url.Action("AddPresentation", "Event", new {id = Model.Id})}?schedulePartId='+schedulePartId, {}, function(){ window.location.reload(); } );
+    }
+    
+    function removePresentation(schedulePartId){
+    $.post('!{Url.Action("RemovePresentation", "Event", new {id = Model.Id})}?schedulePartId='+schedulePartId, {}, function(){ window.location.reload(); } );
+    }
+
+</script>
