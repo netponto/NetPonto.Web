@@ -95,7 +95,6 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
-    <Compile Include="Extensions\SlideshareStringExtensions.cs" />
     <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
@@ -119,6 +118,7 @@
     <Compile Include="StartupTasks\SetupMetadataProviderForValidation.cs" />
     <Compile Include="StartupTasks\TryAndWireNHProf.cs" />
     <Compile Include="StartupTasks\UpdateDatabaseSchema.cs" />
+    <Compile Include="ValueFormatters\SlideshareEmbedCodeToHtml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\local.css" />

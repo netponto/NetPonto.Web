@@ -20,7 +20,7 @@
                   <div if="part.Presentation != null">
                    ${part.Presentation.Description}
                     <p>${part.Presentation.Presenter}</p>
-                    ${part.Presentation.SlideshareEmbedCode.RenderAsSlideshareEmbedCode()}
+                    ${part.Presentation.EmbeddedPresentation}
                   </div>
                 </div>
               </div>
