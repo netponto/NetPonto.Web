@@ -12,6 +12,7 @@ namespace NetPonto.Web.Models.Event
             public string Presenter { get; set; }
             public string SlideshareEmbedCode { get; set; }
             public string EmbeddedPresentation { get; set; }
+            public string EmbeddedVideo { get; set; }
             public Uri LinkToVideo { get; set; }
         }
 

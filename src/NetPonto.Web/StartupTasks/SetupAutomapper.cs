@@ -31,6 +31,12 @@ namespace NetPonto.Web.StartupTasks
                                {
                                    p.MapFrom(s => s.SlideshareEmbedCode);
                                    p.AddFormatter(new SlideshareEmbedCodeToHtml());
+                               })
+                .ForMember(p => p.EmbeddedVideo,
+                           p =>
+                               {
+                                   p.MapFrom(s => s.LinkToVideo);
+                                   p.AddFormatter(new VimeoUrlToEmbeddedVideo());
                                });
         }
     }

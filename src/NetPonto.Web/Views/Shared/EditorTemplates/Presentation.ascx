@@ -25,6 +25,11 @@
     <%= Html.EditorFor(model => model.SlideshareEmbedCode)%>
     <%= Html.ValidationMessageFor(model => model.SlideshareEmbedCode)%>
 </div>
-     
 
-
+<div class="editor-label">
+    <%= Html.LabelFor(model => model.LinkToVideo)%>
+</div>
+<div class="editor-field">
+    <%= Html.EditorFor(model => model.LinkToVideo)%>
+    <%= Html.ValidationMessageFor(model => model.LinkToVideo)%>
+</div>

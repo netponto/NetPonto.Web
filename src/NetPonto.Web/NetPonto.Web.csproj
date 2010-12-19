@@ -119,6 +119,7 @@
     <Compile Include="StartupTasks\TryAndWireNHProf.cs" />
     <Compile Include="StartupTasks\UpdateDatabaseSchema.cs" />
     <Compile Include="ValueFormatters\SlideshareEmbedCodeToHtml.cs" />
+    <Compile Include="ValueFormatters\VimeoUrlToEmbeddedVideo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\local.css" />

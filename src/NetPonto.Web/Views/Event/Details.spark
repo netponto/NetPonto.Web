@@ -21,6 +21,7 @@
                    ${part.Presentation.Description}
                     <p>${part.Presentation.Presenter}</p>
                     ${part.Presentation.EmbeddedPresentation}
+                    ${part.Presentation.EmbeddedVideo}
                   </div>
                 </div>
               </div>
