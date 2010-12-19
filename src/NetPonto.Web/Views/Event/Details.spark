@@ -20,8 +20,8 @@
                   <div if="part.Presentation != null">
                    ${part.Presentation.Description}
                     <p>${part.Presentation.Presenter}</p>
-                    ${part.Presentation.EmbeddedPresentation}
-                    ${part.Presentation.EmbeddedVideo}
+                    ${part.Presentation.SlideshareEmbedCode.RenderAsEmbeddedSlideshareCode(300, 300)}
+                    ${part.Presentation.LinkToVideo.RenderAsEmbeddedVimeoUrl(300, 300)}
                   </div>
                 </div>
               </div>
